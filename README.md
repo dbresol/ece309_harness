@@ -33,6 +33,7 @@ that an LLM is not designed for.
 generate the C code, demonstrating your application of SDD principles.5. AI-Generated Testing: Instruct your AI assistant to write a separate testing script
 that validates your harness's state management and checks for basic memory
 leaks.Step-by-Step Guide
+
 Phase 1: Environment Setup (VS Code)
 Before writing any code, establish a standardized development environment to minimize
 system-specific compiler errors.
@@ -46,6 +47,7 @@ oWindows users: Install WSL (Windows Subsystem for Linux) and install GCC
 via the Ubuntu terminal using sudo apt install gcc.
 Create a Workspace: Open VS Code, create a new empty folder named
 ece309_harness, and open this folder in the editor to keep your project isolated.
+
 Phase 2: Specification Driven Development (SDD) & The "Vibe"
 In vibe coding, the AI requires a rigorous technical specification to produce functional C
 code rather than messy, over-complicated guesses. Do not just tell the AI to "write a chat
@@ -66,6 +68,7 @@ and <string.h>. Here is the specification for the program:
 hardcoded greeting.
 4. If the user types anything else, it should echo their input back to them.
 5. Please add clear, line-by-line comments explaining what the code is doing."
+
 Phase 3: Vibe Coding, Expected Output & Compilation
 Feed your SDD rules into your chosen LLM and ask for a heavily commented, single-file C
 implementation. If your specification is good, the AI should generate something like the
@@ -80,6 +83,7 @@ gcc harness.c -o harness
 errors, paste them back into the AI, and ask it to fix the code).
 3. Run the Program: Test it manually by typing ./harness, testing your keywords
 ("hello", random gibberish), and finally "exit".
+
 Phase 4: AI-Assisted Testing
 Verify the harness works automatically to prepare for grading. Ask the AI to create a simple
 Bash script (test.sh) that pipes predefined text into your compiled program to verify its
